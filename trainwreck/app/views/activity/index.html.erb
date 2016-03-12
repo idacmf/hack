@@ -1,17 +1,15 @@
-
-<% @activities.each do |activitie| %>
-    <div class="col-md-3">
+<div class="row">
+  <% @activities.each do |activitie| %>
+    <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <img src="<%= activitie.image %>">
-        <div class="col-md-9">
-          <p class="title"> <%= activitie.title %> </p>
-          <p class="location"> <%= activitie.location %> </p>
-          <p class="description"> <%= activitie.description %>  </p>
+        <%= image_tag activitie.image, height: "200", width: "200" %>
+        <div class="caption">
+          <h1><%= activitie.title %></h1>
+          <p><%= activitie.location %></p>
+          <h3><%= activitie.description %></h3>
+          <p><a href="#" class="btn btn-primary" role="button">Book Tickets!</a> <a href="#" class="btn btn-default" role="button">More Info</a></p>
         </div>
       </div>
     </div>
-    <%= link_to root_path, "Book hotel" %>
-    <%= link_to root_path, "Book flighttickets" %>
-<% end %>
-
-
+  <% end %>
+</div>
