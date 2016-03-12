@@ -1,0 +1,9 @@
+<div id="searcht" class="col-xs-10">
+  <% @tournament.each do |tournament| %>
+      <div class="article">
+        <%= tournament.name %>
+        <%= tournament.id %>
+        <p class="article-content"><%= tournament.name %></p>
+      </div>
+  <% end %>
+</div>

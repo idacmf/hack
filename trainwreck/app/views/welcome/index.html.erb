@@ -1,0 +1,24 @@
+<div id="left" class="col-xs-6">
+  <%= image_tag("tw_logo.png") %>
+</div>
+<div id="right" class="col-xs-6">
+  <b>Tournament organization made easy!</b>
+  <p>Welcome to the TrainWreck Project! This site is currently under developement, but we'll be sure
+    to update it as soon as possible. Stay tuned for more awesome content.</p>
+  <p><%= link_to "All Tournaments", tournaments_path, {:controller => 'tournaments', :action => 'index'} %></p>
+  <p><%= link_to "My Tournaments", index_my_tournaments_tournaments_path, {:controller => 'tournaments', :action => 'index_my_tournaments'} %></p>
+
+  <!-- Comment in this when running rspec. Rspec cant find the link otherwise -->
+  <!--%= link_to("Create A New Tournament", new_tournament_path) %-->
+  <%= link_to("Go here", tournaments_path) %>
+  <div id="create_new">
+    <% if !user_signed_in? %>
+      <%= link_to("Get Started!", new_user_registration_path) %>
+    <% else %>
+      <%= link_to("Get Started!", new_user_registration_path) %>
+    <% end %>
+  </div>
+</div>
+<%= render partial: "slide" %>
+
+

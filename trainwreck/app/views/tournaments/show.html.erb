@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div class="col-xs-12">
+    <h2>New tournament has been created.</h2>
+    <p>
+      <strong>Name:</strong>
+      <%= @tournament.name %>
+    </p>
+    <p>
+      <strong>Location:</strong>
+      <%= @tournament.location %>
+    </p>
+    <p>
+      <strong>Max teams:</strong>
+      <%= @tournament.max_teams %>
+    </p>
+    <p>
+      <strong>Time start:</strong>
+      <%= @tournament.time_start.to_datetime %>
+    </p>
+    <p>
+      <strong>Time end:</strong>
+      <%= @tournament.time_end.to_datetime %>
+    </p>
+    <p>
+      <strong>Status:</strong>
+      <%= @tournament.status %>
+    </p>
+    <%= link_to 'Back', controller: 'welcome', :action => 'index' %>
+    </div>
+
+
+</body>
+
+
+
+</html>
+

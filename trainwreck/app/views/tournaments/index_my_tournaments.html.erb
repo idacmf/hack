@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<style>
+  .table td {
+    text-align: left;
+  }
+  .table th {
+    text-align: left;
+  }
+</style>
+
+<html>
+<div class="col-xs-12">
+  <h2>Your tournaments</h2>
+  <h4>This is a list of all tournaments you have created.</h4>
+
+  <table class="table table-condensed">
+
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>User ID</th>
+    </tr>
+
+    <% @tournaments.each do |tournament| %>
+        <% if tournament.user_id == current_user.id %>
+            <tr>
+              <td><%= tournament.name %></td>
+              <td><%= tournament.location %></td>
+              <td><%= tournament.user_id %></td>
+            </tr>
+        <% end %>
+    <% end %>
+
+  </table>
+
+  <%= link_to 'Back', controller: 'welcome', :action => 'index' %>
+</div>
+</html>
+

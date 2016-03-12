@@ -1,0 +1,20 @@
+<div class="col-xs-12">
+  <h1>My notifications</h1>
+  <% @notifications.each do |x| %>
+      <% if x.status == 0 %>
+          <tr>
+            <th>Type:</th>
+            <th>Subject:</th>
+            <th>Date</th>
+          </tr>
+          <tr>
+            <td><%= x.type %></td>
+            <td><%= x.notification %></td>
+            <td><%= x.created_at %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</div>
+
+
+

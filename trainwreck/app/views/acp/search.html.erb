@@ -1,0 +1,21 @@
+<%= render partial: "user_sidenav" %>
+<div id="acp-right" class="col-xs-10">
+  <h1 class="acp_title">Search for user</h1>
+  <%= render partial: "search" %>
+  <table class="search">
+    <tr>
+      <th id="search_id">ID</th>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>Email</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to(user.id, user_path(:id => user.id)) %></td>
+        <td><%= link_to(user.first_name, user_path(:id => user.id)) %></td>
+        <td><%= link_to(user.surname, user_path(:id => user.id)) %></td>
+        <td><%= link_to(user.email, user_path(:id => user.id)) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

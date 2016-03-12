@@ -1,0 +1,17 @@
+
+<% @activities.each do |activitie| %>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <img src="<%= activitie.image %>">
+        <div class="col-md-9">
+          <p class="title"> <%= activitie.title %> </p>
+          <p class="location"> <%= activitie.location %> </p>
+          <p class="description"> <%= activitie.description %>  </p>
+        </div>
+      </div>
+    </div>
+    <%= link_to root_path, "Book hotel" %>
+    <%= link_to root_path, "Book flighttickets" %>
+<% end %>
+
+

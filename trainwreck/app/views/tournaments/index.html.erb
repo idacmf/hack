@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<style>
+  .table td {
+    text-align: left;
+  }
+  .table th {
+    text-align: left;
+  }
+</style>
+
+<html>
+  <div class="col-xs-12">
+    <h2>Public tournaments</h2>
+      <h4>This is a list of all public tournaments</h4>
+
+    <table class="table table-condensed">
+
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>User ID</th>
+      </tr>
+
+      <% @tournaments.each do |tournament| %>
+          <% if tournament.status == 0 %>
+              <tr>
+                <td><%= tournament.name %></td>
+                <td><%= tournament.location %></td>
+                <td><%= tournament.user_id %></td>
+              </tr>
+          <% end %>
+      <% end %>
+    </table>
+  <%= link_to 'Back', controller: 'welcome', :action => 'index' %>
+
+  <div id="searcht" class="col-xs-10">
+    <%= form_tag(search_tournaments_path, :method => "get", class: "navbar-form", id: "search-form") do %>
+        <%= label_tag(:search, "Search for tournament:") %>
+        <%= text_field_tag :search, params[:search], class: "span2"%>
+        <%= submit_tag("Search") %>
+        <!-- In order to have the "search" icon int the button, we need to use plain HTML instead
+             of using a Rails form helper -->
+        <!-- <button class="btn" type="submit"><i class="icon-search"></i></button> -->
+    <% end %>
+  </div>
+    </div>
+</html>

@@ -1,0 +1,9 @@
+<li id="team-<%= team.id %>">
+  <span class="user"><%= link_to team.user.name, team.user %></span>
+  <span class="team_name"><%= team.team_name %></span>
+  <span class="team_contact_name"><%= team.team_contact_name %></span>
+  <span class="team_phone_nr"><%= team.team_phone_nr %></span>
+  <span class="timestamp">
+    Created <%= time_ago_in_words(team.created_at) %> ago.
+  </span>
+</li>

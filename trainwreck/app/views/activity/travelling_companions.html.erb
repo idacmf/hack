@@ -1,0 +1,29 @@
+<div class="row" id="activity_type_list">
+  <h1>Who are you travelling with?</h1>
+  <div class="col-xs-6 act_type">
+    <%= link_to activity_types_path(:val => "0") do %>
+        <%= image_tag("http://s12.postimg.org/a7jhrbqr1/cartoon_one_direction_png_by_yazsexydilemma_d5d3.png")%>
+        <p>Friends</p>
+    <% end %>
+  </div>
+  <div class="col-xs-6 act_type">
+    <%= link_to activity_types_path(:val => "1") do %>
+        <%= image_tag("http://s10.postimg.org/c4835shfd/famly.png")%>
+        <p>Family</p>
+    <% end %>
+  </div>
+</div>
+<div class="row" id="activity_type_list">
+  <div class="col-xs-6 act_type">
+    <%= link_to activity_types_path(:val => "2") do %>
+        <%= image_tag("http://s29.postimg.org/q9ikw6cmf/work.png")%>
+        <p>Work</p>
+    <% end %>
+  </div>
+  <div class="col-xs-6 act_type">
+    <%= link_to activity_types_path(:val => "3") do %>
+        <%= image_tag("http://s28.postimg.org/tgjz0w3ul/alone.png")%>
+        <p>Alone</p>
+    <% end %>
+  </div>
+</div>

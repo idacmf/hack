@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trainwreck</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="main-container" class="container">
+  <%= render partial: "application/login" %>
+
+  <div class="row">
+    <div id="acp-main-top" class="col-xs-12">
+      <h1>Admin Control Panel</h1>
+    </div>
+  </div>
+
+  <%= render partial: "application/acp_topnav" %>
+  <%= render partial: "application/alerts" %>
+
+  <div id="acp-content" class="row">
+    <%= yield %>
+  </div>
+</div>
+
+</body>
+</html>

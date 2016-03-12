@@ -1,0 +1,6 @@
+<% provide(:title, baseteam_title('Show all teams')) %>
+
+<% @teams.each do |t| %>
+    <p> <%= t.team_name %>, <%= t.team_contact_name %>, <%= t.team_phone_nr %>, <%= t.user_id %> </p>
+    <% #Debatable if contact info should be shown here. %>
+<% end %>

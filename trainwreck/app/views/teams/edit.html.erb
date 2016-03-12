@@ -1,0 +1,21 @@
+<% provide(:title, "Edit team") %>
+<h1>Update a team</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@team) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :team_name %>
+        <%= f.text_field :team_name, class: 'form-control' %>
+
+        <%= f.label :team_contact_name, "Name of contact person" %>
+        <%= f.text_field :team_contact_name, class: 'form-control' %>
+
+        <%= f.label :team_phone_nr, "Phone number of contact person" %>
+        <%= f.telephone_field :team_phone_nr, class: 'form-control' %>
+
+        <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

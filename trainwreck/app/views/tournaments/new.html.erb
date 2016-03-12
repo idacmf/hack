@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div class="col-xs-12">
+    <h2>Make a New Tournament</h2>
+    <h4>Here you can make a new empty tournament. Just fill in the the schema.</h4>
+
+    <%#=Fill in name, location and other stuff for your tournament. %>
+    <%= form_for :tournaments, url: tournaments_path do |t| %>
+
+        <% if @tournament.errors.any? %>
+            <div id="error_explanation">
+              <font color="red">
+                <h2>
+                  <%= pluralize(@tournament.errors.count, "error") %> prohibitetd his article from being saved:
+                </h2>
+                <ul>
+                  <% @tournament.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </font>
+            </div>
+        <% end %>
+
+          <%= t.hidden_field :user_id %>
+
+          <div class="field">
+            <%= t.label :name %><br>
+            <%= t.text_field :name %>
+          </div>
+          <br>
+
+          <div class="field">
+            <%= t.label :location %><br>
+            <%= t.text_field :location%>
+          </div>
+          <br>
+
+          <div class="field">
+            <%= t.label :max_teams %><br>
+            <%= t.text_field :max_teams%>
+          </div>
+          <br>
+
+          <%#= Drop down menu for selecting private or open tournament %>
+          <div class="field">
+            <%= t.label :"Tournament status" %><br>
+            <%= t.select :status, [['Public', 0], ['Private', 1]]%>
+          </div>
+          <br>
+
+          <%#= Drop down menu for selecting time start and time end for the tournament. DDM is order by day, month and year.%>
+          <div class="field">
+            <%= t.label :time_start %><br>
+            <%= t.datetime_select :time_start, :start_year => Date.current.year, :include_blanc => true, :order => [:day, :month, :year] %>
+          </div>
+          <br>
+
+
+          <div class="field">
+            <%= t.label :time_end %><br>
+            <%= t.datetime_select :time_end, :start_year => Date.current.year, :include_blanc => true, :order => [:day, :month, :year] %>
+          </div>
+          <br>
+
+          <div class="field">
+            <%= t.submit :'Create new tournament' %>
+          </div>
+          <br>
+    <% end %>
+  </div>
+</body>
+
+

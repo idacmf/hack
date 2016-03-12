@@ -1,0 +1,74 @@
+
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import cerulean variables
+@import "bootswatch/slate/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+
+// And finally bootswatch style itself
+@import "bootswatch/slate/bootswatch";
+
+
+body {
+  text-align: center;
+}
+
+body p {
+  color: white;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.btn btn-default btn-lg {
+  width: 200px;
+}
+
+
+.btn btn-lg {
+  width: 145px;
+  height: 45px;
+}
+.spacer {
+  height: 150px;
+}
+
+ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+li {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+#content {
+  margin-top: 25px;
+}
+
+#activity_type_list p {
+  font-size: 16px;
+}
+
+.act_type {
+  margin-bottom: 20px;
+}

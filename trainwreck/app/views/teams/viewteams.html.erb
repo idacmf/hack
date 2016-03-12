@@ -1,0 +1,11 @@
+<% provide(:title, baseteam_title()) %>
+
+<div class="center jumbotron">
+  <h1>Temporary site for adding teams without log in requirements.</h1>
+
+  <h2>
+    Site that "redirects" to the site for adding teams. In a later implementation, this site can list the existing teams.
+  </h2>
+
+  <%= link_to "Add a new team!", addteam_path, class: "btn btn-lg btn-primary" %>
+</div>

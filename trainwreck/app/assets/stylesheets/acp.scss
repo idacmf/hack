@@ -1,0 +1,18 @@
+// Place all the styles related to the acp controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+*= #require_tree .
+*= #require_self
+   */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#acp-left {
+  border: 1px solid black;
+}
+
+#acp-right {
+  border: 1px solid black;
+}

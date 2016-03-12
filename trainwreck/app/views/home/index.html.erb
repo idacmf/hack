@@ -1,0 +1,15 @@
+<div class="spacer col-xs-12"></div>
+<div class="col-xs-12">
+  <h1>Hello
+    <% if user_signed_in? %>
+      <%= current_user.first_name %>
+    <% end %></h1>
+
+  <h2>Where do you want to go?</h2>
+  <h2>What do you want to do?</h2>
+</div>
+<div class="col-xs-12 text-center">
+  <%= link_to travelling_companions_path do %>
+      <button type="button" class="btn btn-default btn-lg">Find</button>
+  <% end %>
+</div>
