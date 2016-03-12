@@ -2,6 +2,19 @@
   <div class="col-xs-12">
     <h1>Here is your journey summary <%= current_user.first_name %></h1>
 
-    <p>stuff n thangs</p>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= image_tag("http://www.targeting-mitochondria.com/images/2016/vrac/Brandenburg-Gate-West-Berlin.jpg", height: 250, width: 250) %>
+        <h2>Berlin, Germany</h2>
+      </div>
+      <div class="panel-footer">Because you went to Hard Rock Cafe, London</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= image_tag("http://static.thousandwonders.net/Troms%C3%B8.original.2835.jpg", height: 250, width: 250) %>
+        <h2>Tromsø, Norway</h2>
+      </div>
+      <div class="panel-footer">Because you like outdoor adventures</div>
+    </div>
   </div>
 </div>
